@@ -1,65 +1,82 @@
-# Borcum - Borc/Alacak Takip Uygulamasi
+# Borcum - Borç/Alacak Takip Uygulaması
 
-Flutter + Firebase + GetX ile gelistirilmis modern borc/alacak takip uygulamasi.
+Flutter + Firebase + GetX ile geliştirilmiş modern borç/alacak takip uygulaması.
+
+**Hackathon 2026 Projesi**
 
 ---
 
-## Kurulum Adimlari
+## Teknoloji Stack
+
+| Frontend | Backend |
+|---|---|
+| Flutter SDK >= 3.0.0 | Firebase Authentication |
+| Dart SDK >= 3.0.0 | Firestore Database |
+| GetX (State Management) | Firebase Cloud Messaging |
+| GetX (Routing) | FlutterFire CLI |
+
+---
+
+## Kurulum Adımları
 
 ### 1. Gereksinimler
+
 - Flutter SDK >= 3.0.0
 - Dart SDK >= 3.0.0
-- Firebase hesabi
+- Firebase hesabı
 - VS Code + Flutter extension
 
-### 2. Firebase Projesi Olusturma
+### 2. Firebase Projesi Oluşturma
 
 1. [Firebase Console](https://console.firebase.google.com)'a gidin
-2. **Yeni proje olustur** > proje adini girin
+2. **Yeni proje oluştur** > proje adını girin
 3. **Authentication** > **Sign-in method** > **Email/Password**'u aktif edin
-4. **Firestore Database** > **Create database** > Test modunda baslayin
-5. Firestore kurallarini `firestore.rules` dosyasindan kopyalayin
+4. **Firestore Database** > **Create database** > Test modunda başlayın
+5. Firestore kurallarını `firestore.rules` dosyasından kopyalayın
 
 ### 3. FlutterFire CLI Kurulumu
 
 ```bash
-# FlutterFire CLI yukle
+# FlutterFire CLI yükle
 dart pub global activate flutterfire_cli
 
-# Projeyi Firebase'e bagla (proje klasoründeyken calistir)
+# Projeyi Firebase'e bağla (proje klasöründeyken çalıştır)
 flutterfire configure
 ```
 
-Bu komut `lib/firebase_options.dart` dosyasini otomatik olusturur/gunceller.
+> Not: Bu komut `lib/firebase_options.dart` dosyasını otomatik oluşturur ve günceller.
 
-### 4. Bagimliliklari Yukle
+### 4. Bağımlılıkları Yükle
 
 ```bash
 flutter pub get
 ```
 
-### 5. Android Ayarlari
+### 5. Android Ayarları
 
-`android/app/build.gradle` dosyasinda `minSdk`'yi kontrol edin:
+`android/app/build.gradle` dosyasında `minSdk` değerini kontrol edin:
+
 ```gradle
 defaultConfig {
     minSdk 21
 }
 ```
 
-`android/app/src/main/AndroidManifest.xml` dosyasina internet izni ekleyin:
+`android/app/src/main/AndroidManifest.xml` dosyasına internet izni ekleyin:
+
 ```xml
-<uses-permission android:name="android.permission.INTERNET"/>
+
 ```
 
-### 6. iOS Ayarlari (Mac icin)
+### 6. iOS Ayarları (Mac için)
 
-`ios/Podfile` dosyasinda minimum iOS versiyonunu ayarlayin:
+`ios/Podfile` dosyasında minimum iOS versiyonunu ayarlayın:
+
 ```ruby
 platform :ios, '13.0'
 ```
 
-### 7. Uygulamayi Calistir
+### 7. Uygulamayı Çalıştır
 
 ```bash
 flutter run
@@ -67,9 +84,7 @@ flutter run
 
 ---
 
-## Proje Yapisi
-
-```
+## Proje Yapısı
 lib/
 ├── core/
 │   ├── constants/     # AppConstants, AppStrings
@@ -79,61 +94,73 @@ lib/
 │   └── widgets/       # AppButton, AppCard, AppTextField
 ├── data/
 │   ├── models/        # UserModel, CafeModel
-│   ├── repositories/  # (sonraki asama)
+│   ├── repositories/  # (sonraki aşama)
 │   └── services/      # AuthService, FirestoreService
 ├── modules/
 │   ├── auth/
-│   │   ├── bindings/  # AuthBinding
+│   │   ├── bindings/    # AuthBinding
 │   │   ├── controllers/ # AuthController
-│   │   ├── views/     # LoginView, RegisterView...
-│   │   └── widgets/   # AuthFormHeader, AuthFooterLink
-│   ├── home/          # UserHomeView, CafeHomeView
-│   └── splash/        # SplashView
+│   │   ├── views/       # LoginView, RegisterView...
+│   │   └── widgets/     # AuthFormHeader, AuthFooterLink
+│   ├── home/            # UserHomeView, CafeHomeView
+│   └── splash/          # SplashView
 ├── firebase_options.dart
 └── main.dart
-```
 
-## Firestore Yapisi
+---
 
-```
+## Firestore Veri Yapısı
 users/
-  {uid}/
-    uid: string
-    name: string
-    username: string
-    email: string
-    phone: string
-    accountType: "user"
-    createdAt: timestamp
-
+{uid}/
+uid: string
+name: string
+username: string
+email: string
+phone: string
+accountType: "user"
+createdAt: timestamp
 cafes/
-  {uid}/
-    uid: string
-    name: string
-    username: string
-    email: string
-    phone: string
-    accountType: "cafe"
-    createdAt: timestamp
-```
+{uid}/
+uid: string
+name: string
+username: string
+email: string
+phone: string
+accountType: "cafe"
+createdAt: timestamp
 
-## Ozellikler (Bu Asama)
+---
 
-- [x] Splash ekrani (oturum kontrolu ile)
-- [x] Hesap tipi secimi (Kullanici / Kafe)
-- [x] Kullanici kayit / giris
-- [x] Kafe kayit / giris
-- [x] Sifre sifirlama
+## Özellikler
+
+### Mevcut Sürüm
+
+- [x] Splash ekranı (oturum kontrolü ile)
+- [x] Hesap tipi seçimi (Kullanıcı / Kafe)
+- [x] Kullanıcı kayıt / giriş
+- [x] Kafe kayıt / giriş
+- [x] Şifre sıfırlama
 - [x] Firebase Authentication
-- [x] Firestore kullanici kaydi
+- [x] Firestore kullanıcı kaydı
 - [x] GetX state management ve routing
 - [x] Form validasyonu
-- [x] Hata yonetimi
+- [x] Hata yönetimi
 
-## Sonraki Asama
+### Planlanan Geliştirmeler
 
-- [ ] Borc/alacak ekleme
-- [ ] Musteri yonetimi (Kafe)
+- [ ] Borç/alacak ekleme
+- [ ] Müşteri yönetimi (Kafe)
 - [ ] Bildirimler (FCM)
-- [ ] OCR ile fis okuma
-- [ ] Ozet ve istatistikler
+- [ ] OCR ile fiş okuma
+- [ ] Özet ve istatistikler
+
+---
+
+## Takım
+
+Bu proje Hackathon 2026 kapsamında geliştirilmiştir.
+
+| İsim |
+|Aynur KARAKAYA|
+| Özlem Nur Dinç |
+| Derya Arslan |
