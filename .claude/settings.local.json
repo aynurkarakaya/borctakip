@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Read(//c/Users/aynur/borctakip/lib/modules/profile/**)",
+      "Read(//c/Users/aynur/borctakip/lib/modules/main_nav/**)",
+      "Read(//c/Users/aynur/borctakip/lib/modules/auth/controllers/**)"
+    ]
+  }
+}

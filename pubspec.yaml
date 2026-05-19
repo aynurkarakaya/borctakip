@@ -1,0 +1,48 @@
+name: borctakip
+description: Borcum - Modern Borç ve Alacak Takip Uygulaması
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Firebase
+  firebase_core: ^3.1.0
+  firebase_auth: ^5.1.0
+  cloud_firestore: ^5.1.0
+  firebase_messaging: ^15.0.0
+  
+  # State Management & Navigation
+  get: ^4.6.6
+  
+  # OCR
+  google_mlkit_text_recognition: ^0.13.0
+  
+  # UI
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  
+  # Utils
+  intl: ^0.19.0
+  shared_preferences: ^2.2.3
+  connectivity_plus: ^6.0.3
+  uuid: ^4.4.0
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.1
+  rxdart: ^0.27.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/

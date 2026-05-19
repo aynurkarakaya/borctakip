@@ -1,0 +1,27 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "borc-takip-app-2026",
+          "appId": "1:498913870690:android:80e556e0592c5c14d5223b",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "borc-takip-app-2026",
+          "configurations": {
+            "android": "1:498913870690:android:80e556e0592c5c14d5223b",
+            "web": "1:498913870690:web:d5a7f0b53de20fdfd5223b",
+            "windows": "1:498913870690:web:fa569e05b61b486bd5223b"
+          }
+        }
+      }
+    }
+  }
+}

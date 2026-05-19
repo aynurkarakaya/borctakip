@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "498913870690",
+    "project_id": "borc-takip-app-2026",
+    "storage_bucket": "borc-takip-app-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498913870690:android:c2b57b1aba843d5fd5223b",
+        "android_client_info": {
+          "package_name": "com.aynur.borctakip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498913870690-ok00md3ui414t6250hbi83siflt320oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFI7yzGIRnF_Sq3aWPQTKNPOAG6aAZa7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498913870690-ok00md3ui414t6250hbi83siflt320oi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "498913870690-5qccuse82f0gg3rfn8o7uq0lierd4m40.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aynur.borcta"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498913870690:android:80e556e0592c5c14d5223b",
+        "android_client_info": {
+          "package_name": "com.example.borctakip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498913870690-ok00md3ui414t6250hbi83siflt320oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFI7yzGIRnF_Sq3aWPQTKNPOAG6aAZa7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498913870690-ok00md3ui414t6250hbi83siflt320oi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "498913870690-5qccuse82f0gg3rfn8o7uq0lierd4m40.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aynur.borcta"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
